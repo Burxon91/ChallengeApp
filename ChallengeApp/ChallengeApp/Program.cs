@@ -1,9 +1,22 @@
-﻿//var myAge = 33;
+﻿string name = "Ewa";
+int age = 33;
+bool kobieta = true;
 
-int myAge2 = 120;
-int newAge = myAge2 + 5;
-Console.WriteLine(newAge);
-int myVar = int.MinValue;
-uint myVar2 = uint.MaxValue;
-ulong myVar3 = ulong.MaxValue;
+if (kobieta)
+{
+    if (name == "Ewa" && age == 33)
+    {
+        var result = name + ", lat " + age;
+        Console.WriteLine(result);
+    }
+    else if (name != "Ewa" && age < 30)
+    {
+        Console.WriteLine("Kobieta poniżej 30 lat");
+    }
+
+}
+else if (age < 18)
+{
+    Console.WriteLine("Niepełnoletni mężczyzna");
+}
 
