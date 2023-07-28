@@ -1,5 +1,5 @@
 ﻿string name = "Ewa";
-int age = 33;
+int age = 15;
 bool kobieta = true;
 
 if (kobieta)
@@ -9,7 +9,7 @@ if (kobieta)
         var result = name + ", lat " + age;
         Console.WriteLine(result);
     }
-    else if (name != "Ewa" && age < 30)
+    else if (age < 30)
     {
         Console.WriteLine("Kobieta poniżej 30 lat");
     }
