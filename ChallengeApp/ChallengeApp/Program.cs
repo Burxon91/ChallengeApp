@@ -1,60 +1,74 @@
+<<<<<<< HEAD
 ﻿using ChallengeApp;
 using System.ComponentModel.Design;
+using System.Runtime.Intrinsics.X86;
 
-Employee employee1 = new Employee("Adam", "Nowak", 23);
-Employee employee2 = new Employee("Monika", "Kowalska", 41);
-Employee employee3 = new Employee("Stefan", "Batory", 28);
+User user1 = new User("Adam", "abc1234");
+User user2 = new User("Monika", "abc1234");
+User user3 = new User("Stefan", "abc1234");
+=======
+﻿using System.Threading.Tasks.Sources;
+
+User user1 = new User("Adam", "Adam");
+User user2 = new User("Monika", "Adam");
+User user3 = new User("Zuzia", "Adam");
+User user4 = new User("Damian", "Adam");
+>>>>>>> parent of 7cccbde (Zadanie domowe #6)
+
+user1.AddScore(5);
+user1.AddScore(2);
+user2.AddScore(3);
+user2.AddScore(3);
+user2.AddScore(10);
+user3.AddScore(4);
+user3.AddScore(6);
+user3.AddScore(4);
+var result = user1.Result;
+var result2 = user2.Result;
+var result3 = user3.Result; 
+Console.WriteLine(result);
+Console.WriteLine(result2);
+Console.WriteLine(result3);
+
+<<<<<<< HEAD
+user1.AddScore(5);
+user1.AddScore(7);
+user1.AddScore(8);
+
+user2.AddScore(10);
+user2.AddScore(2);
+user2.AddScore(9);
+
+user3.AddScore(9);
+user3.AddScore(7);
+user3.AddScore(5);
 
 
-employee1.AddMark(5);
-employee1.AddMark(7);
-employee1.AddMark(8);
-employee1.AddMark(3);
-employee1.AddMark(7);
 
-employee2.AddMark(10);
-employee2.AddMark(2);
-employee2.AddMark(9);
-employee2.AddMark(5);
-employee2.AddMark(9);
-
-employee3.AddMark(9);
-employee3.AddMark(7);
-employee3.AddMark(5);
-employee3.AddMark(1);
-employee3.AddMark(4);
-
-
-var result = employee1.Result;
-var result2 = employee2.Result;
-var result3 = employee3.Result;
-var name1 = employee1.Name;
-var surname1 = employee1.Surname;
-var age1 = employee1.Age;
-var name2 = employee2.Name;
-var surname2 = employee2.Surname;
-var age2 = employee2.Age;
-var name3 = employee3.Name;
-var surname3 = employee3.Surname;
-var age3 = employee3.Age;
-
-if (employee1.Result > employee2.Result)
+=======
+class User
 {
-    if (employee1.Result > employee3.Result)
+    private List<int> score = new List<int>();
+    public User(string login, string password)
     {
+        this.Login = login;
+        this.Password = password;
+       
+    }
+    public string Login { get; private set; }
+    public string Password { get; private set; }
+    public int Result 
+    { 
+        get
+        {
+            return this.score.Sum();
+        } 
+    }
 
-        System.Console.WriteLine("Imię: " + name1 + " Nazwisko: " + surname1 + " Wiek: " + age1 + " Wynik: " + employee1.Result);
-    }
-    else
+    public void AddScore(int score)
     {
-        System.Console.WriteLine("Imię: " + name3 + " Nazwisko: " + surname3 + " Wiek: " + age3 + " Wynik: " + employee3.Result);
+        this.score.Add(score);
     }
 }
-else if (employee2.Result > employee3.Result)
-{
-    System.Console.WriteLine("Imię: " + name2 + " Nazwisko: " + surname2 + " Wiek: " + age2 + " Wynik: " + employee2.Result);
-}
-else
-{
-    System.Console.WriteLine("Imię: " + name3 + " Nazwisko: " + surname3 + " Wiek: " + age3 + " Wynik: " + employee3.Result);
-}
+>>>>>>> parent of 7cccbde (Zadanie domowe #6)
+
