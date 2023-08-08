@@ -1,17 +1,17 @@
 namespace ChallengeApp.Tests
 {
-    public class Tests
+    public class MarkTests
     {
        
         [Test]
         public void AddMarkVerification()
         {
-            //arrange
-            var Employee = new Employee("Adam", "Nowak", 24);
+            //arrange 
+            var Employee = new Employee("Adam");
             Employee.AddMark(5);
             Employee.AddMark(6);
-            Employee.AddBonus(7); //podwojenie oceny
-            Employee.RemoveMark(5); //minus podana ocena
+            Employee.RemoveMark(5);
+            Employee.AddBonus(7);
 
             //act
             var result = Employee.Result;
