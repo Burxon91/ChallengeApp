@@ -1,25 +1,14 @@
 using ChallengeApp;
 
-Employee    employee1 = new Employee("Adam");
-Employee    employee2 = new Employee("Stefan");
-Employee    employee3 = new Employee("Jan");
+var employee = new Employee("Krzysztof", "Trela");
 
-
-employee1.AddMark(5);
-employee1.AddMark(2);
-employee1.AddMark(3);
-
-employee2.AddMark(3);
-employee2.AddMark(10);
-employee2.AddMark(10);
-
-employee3.AddMark(4);
-employee3.AddMark(6);
-employee3.AddMark(4);
-
-
-
-
+employee.AddGrade(2);
+employee.AddGrade(5);
+employee.AddGrade(6);
+var statistics = employee.GetStatistics();
+Console.WriteLine($"Average: {statistics.Avg:N1}");
+Console.WriteLine($"Min: {statistics.Min}");
+Console.WriteLine($"Max: {statistics.Max}");
 
 
 
