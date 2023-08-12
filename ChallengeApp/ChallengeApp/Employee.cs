@@ -15,7 +15,6 @@
 
         public void AddGrade(float grade)
         {
-            int valueInInt = (int)Math.Ceiling(grade);
             if (grade >= 0 && grade <= 100)
             {
                 this.grades.Add(grade);
@@ -41,11 +40,7 @@
             float doubleToFloat = (float)grade;
             this.AddGrade(doubleToFloat);
         }
-        public void AddGrade(char grade)
-        {
-            float charToFloat = Convert.ToSingle(grade);
-            this.AddGrade(charToFloat);
-        }
+      
         public void AddGrade(long grade)
         {
             float longToFloat = (float)grade;
